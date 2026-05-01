@@ -2,96 +2,163 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
-    /* Adicionamos um padding extra embaixo para o botão fixo não esconder a última foto */
-    padding: 20px 20px 100px 20px; 
+    background-color: #F9F8F4; /* Fundo areia/palha muito claro e orgânico */
+    color: #3A3F38; /* Texto em verde-musgo quase preto, mais suave que o preto puro */
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 20px 110px 20px; 
     text-align: center;
 }
 
 header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 header h1 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2C4A3B; /* Verde botânico profundo (Lush Green) */
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 header p {
-    font-size: 0.95rem;
-    color: #666;
+    font-size: 1rem;
+    color: #6B705C; /* Tom terroso/esverdeado para subtítulos */
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
 }
 
-/* 📱 MOBILE FIRST: Por padrão, o grid terá apenas 1 coluna ocupando 100% da largura */
+/* GRID RESPONSIVO */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr; 
-    gap: 24px;
-    max-width: 1200px;
+    gap: 32px; /* Mais espaço para respirar, típico de design de luxo */
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-/* 💻 TELAS MAIORES (Tablets e PCs): Quando a tela passar de 600px, ele volta a distribuir em várias colunas */
 @media (min-width: 600px) {
     .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
+/* CARDS DAS CESTAS */
 .card-cesta {
-    background-color: #fff;
-    border-radius: 12px;
+    background-color: #FFFFFF;
+    border-radius: 4px; /* Bordas menos arredondadas dão um ar mais maduro e editorial */
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(44, 74, 59, 0.05); /* Sombra difusa e elegante com tom esverdeado */
+    border: 1px solid #EAE6DF; /* Borda bem sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-cesta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(44, 74, 59, 0.1);
+}
+
+.img-container {
+    position: relative;
 }
 
 .card-cesta img {
     width: 100%;
-    height: 300px; /* Um pouco mais alto para destacar bem a foto no celular */
+    height: 320px;
     object-fit: cover; 
     display: block;
 }
 
+/* ETIQUETA COM O NÚMERO */
+.badge-numero {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #B5838D; /* Rosa/Terracota botânico, foge do vermelho promo */
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(181, 131, 141, 0.3);
+    z-index: 10;
+}
+
+/* INFORMAÇÕES DO CARD */
 .card-info {
-    padding: 16px;
-    text-align: left; /* Fica mais elegante no celular alinhado à esquerda */
+    padding: 24px;
+    text-align: center; /* Centralizado fica mais elegante para vitrines */
 }
 
 .card-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-    color: #222;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #2C4A3B;
 }
 
-.card-info p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.4;
+.card-info .preco {
+    font-size: 1.1rem;
+    color: #A3B18A; /* Verde sálvia para o preço */
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
-/* 🟢 BOTÃO FIXO ESTILO APLICATIVO */
-.btn-whatsapp {
+/* BOTÃO DE PEDIDO NO CARD */
+.btn-card-whatsapp {
+    display: block; 
+    text-align: center;
+    padding: 14px;
+    background-color: #F0EFE9; /* Fundo neutro e orgânico */
+    color: #2C4A3B; /* Texto verde escuro */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase; /* Letras maiúsculas = toque premium */
+    letter-spacing: 1px;
+    border: 1px solid #2C4A3B;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-card-whatsapp:hover, .btn-card-whatsapp:active {
+    background-color: #2C4A3B;
+    color: #FFFFFF;
+}
+
+/* BOTÃO FIXO (Falar com Floricultura) */
+.btn-whatsapp-fixo {
     position: fixed;
-    bottom: 20px;
+    bottom: 24px;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza exato na tela */
-    width: 90%; /* Ocupa quase toda a largura da tela do celular */
-    max-width: 400px; /* Não deixa ficar gigante no PC */
-    background-color: #25D366;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 380px;
+    background-color: #588157; /* Verde botânico claro mas chamativo */
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 16px;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    padding: 18px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); /* Sombrinha verde para destacar */
-    z-index: 1000; /* Garante que fique por cima das fotos */
+    box-shadow: 0 8px 25px rgba(88, 129, 87, 0.4);
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp-fixo:active {
+    background-color: #3A5A39;
 }
