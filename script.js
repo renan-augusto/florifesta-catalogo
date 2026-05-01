@@ -16,11 +16,119 @@ const cestas = [
         nome: "Cesta Dia das Mães",
         descricao: "Preço R$280,00",
         imagem: "assets/img/03kit-280.jpeg"
+    },
+    {
+        id: 4,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$270,00",
+        imagem: "assets/img/04kit-270.jpeg"
+    },
+    {
+        id: 5,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$275,00",
+        imagem: "assets/img/05kit-275.jpeg"
+    },
+    {
+        id: 6,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$270,00",
+        imagem: "assets/img/06kit-270.jpeg"
+    },
+    {
+        id: 7,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$285,00",
+        imagem: "assets/img/07kit-285.jpeg"
+    },
+    {
+        id: 8,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$285,00",
+        imagem: "assets/img/08kit-285.jpeg"
+    },
+    {
+        id: 9,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$260,00",
+        imagem: "assets/img/09kit-260.jpeg"
+    },
+    {
+        id: 10,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$265,00",
+        imagem: "assets/img/10kit-265.jpeg"
+    },
+    {
+        id: 11,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$265,00",
+        imagem: "assets/img/11kit-265.jpeg"
+    },
+    {
+        id: 12,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$285,00",
+        imagem: "assets/img/12kit-285.jpeg"
+    },
+    {
+        id: 13,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$250,00",
+        imagem: "assets/img/13kit-250.jpeg"
+    },
+    {
+        id: 14,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$275,00",
+        imagem: "assets/img/14kit-275.jpeg"
+    },
+    {
+        id: 15,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$280,00",
+        imagem: "assets/img/15kit-280.jpeg"
+    },
+    {
+        id: 16,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$275,00",
+        imagem: "assets/img/16kit-275.jpeg"
+    },
+    {
+        id: 17,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$295,00",
+        imagem: "assets/img/17kit-295.jpeg"
+    },
+    {
+        id: 18,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$300,00",
+        imagem: "assets/img/18kit-300.jpeg"
+    },
+    {
+        id: 19,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$265,00",
+        imagem: "assets/img/19kit-265.jpeg"
+    },
+    {
+        id: 20,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$220,00",
+        imagem: "assets/img/20kit-220.jpeg"
+    },
+    {
+        id: 21,
+        nome: "Cesta Dia das Mães",
+        descricao: "Preço R$220,00",
+        imagem: "assets/img/21kit-220.jpeg"
     }
 ];
 
 const containerGaleria = document.getElementById('galeria-cestas');
-const numeroWhatsApp = "5511999999999"; 
+const numeroWhatsApp = "5516997679116"; 
 
 function carregarCestas() {
     const htmlCestas = cestas.map((cesta, index) => {
