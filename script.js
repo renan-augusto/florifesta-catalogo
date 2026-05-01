@@ -2,21 +2,21 @@
 const cestas = [
     {
         id: 1,
-        nome: "Cesta de Café da Manhã Premium",
-        descricao: "Pães artesanais, frios, frutas da estação e suco natural.",
-        imagem: "assets/img/cesta-cafe.jpg"
+        nome: "Cesta dia das mães",
+        descricao: "Preço R$270,00",
+        imagem: "assets/img/01kit-270.jpeg"
     },
     {
         id: 2,
-        nome: "Cesta de Chocolates Finos",
-        descricao: "Seleção de trufas, barras de chocolate e bombons recheados.",
-        imagem: "assets/img/cesta-chocolate.jpg"
+        nome: "Cesta dia das mães",
+        descricao: "Preço R$300,00",
+        imagem: "assets/img/02kit-300.jpeg"
     },
     {
         id: 3,
-        nome: "Cesta Romântica com Rosas",
-        descricao: "Acompanha buquê de rosas vermelhas, pelúcia e espumante.",
-        imagem: "assets/img/cesta-flores.jpg"
+        nome: "Cesta dia das mães",
+        descricao: "Preço R$280,00",
+        imagem: "assets/img/03kit-280.jpeg"
     }
     // Para adicionar mais produtos, é só colocar um novo bloco com vírgula aqui
 ];
