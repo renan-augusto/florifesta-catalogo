@@ -141,7 +141,7 @@ function carregarCestas() {
             <article class="card-cesta">
                 <div class="img-container">
                     <span class="badge-numero">#${numeroCesta}</span>
-                    <img src="${cesta.imagem}" alt="${cesta.nome}">
+                    <img src="${cesta.imagem}" alt="${cesta.nome}" onclick="abrirZoom('${cesta.imagem}')">
                 </div>
                 <div class="card-info">
                     <h2>${cesta.nome}</h2>
@@ -157,6 +157,27 @@ function carregarCestas() {
     }).join('');
 
     containerGaleria.innerHTML = htmlCestas;
+}
+
+
+function abrirZoom(caminhoImagem) {
+    const lightbox = document.getElementById('lightbox');
+    const imgZoom = document.getElementById('img-zoom');
+    
+    // Passa o caminho da imagem clicada para a imagem grandona do lightbox
+    imgZoom.src = caminhoImagem;
+    // Muda o display de 'none' para 'flex' (para aparecer e centralizar)
+    lightbox.style.display = 'flex';
+}
+
+function fecharZoom() {
+    const lightbox = document.getElementById('lightbox');
+    const imgZoom = document.getElementById('img-zoom');
+    
+    // Esconde o lightbox
+    lightbox.style.display = 'none';
+    // Limpa a imagem da memória
+    imgZoom.src = "";
 }
 
 carregarCestas();

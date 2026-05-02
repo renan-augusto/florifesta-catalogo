@@ -162,3 +162,62 @@ header p {
 .btn-whatsapp-fixo:active {
     background-color: #3A5A39;
 }
+
+
+/* --- INÍCIO: ESTILOS DO ZOOM (LIGHTBOX) --- */
+.card-cesta img {
+    cursor: pointer;
+}
+
+/* O fundo escuro que cobre a tela toda */
+.lightbox {
+    display: none; /* Fica invisível até ser acionado pelo JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 25, 20, 0.9); /* Um tom bem escuro com toque de verde musgo */
+    z-index: 2000; /* Fica acima do botão do WhatsApp */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Dá um desfoque chique no fundo (funciona em celulares modernos) */
+}
+
+/* A foto ampliada no meio da tela */
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh; /* Não deixa a foto ser maior que a altura da tela */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: zoomSuave 0.3s ease-out; /* Animação de entrada */
+}
+
+/* Botão de fechar (X) */
+.fechar-zoom {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #F9F8F4;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fechar-zoom:hover {
+    transform: scale(1.2);
+}
+
+@keyframes zoomSuave {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
